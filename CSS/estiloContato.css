@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+form{
+	width:50%;/*largura do formulário*/
+	margin:auto; /*para ficar no centro*/
+	font-family:'Century Gothic', 'Arial Narrow', Arial, sans-serif;
+	
+}
+input, textarea{ /*fundo da caixa de preenchimento de dados*/
+	font-family:verdana, sans-serif;
+	font-weight:normal;
+	font-size:1.2em;
+	background-color:#f8f3f3;
+	font-family:'Century Gothic', 'Arial Narrow', Arial, sans-serif;
+	border-color: #696868;
+	padding: 5px;
+	border-radius: 5px;
+
+}
+
+
+input:hover, textarea:hover{ /*quando passar o mouse na caixa de texto mudará de cor */
+	background-color:#d5d8da;
+	
+}
+
+
+
+
+
+
+#cUrg { /*ID DO RANGE*/
+    -webkit-appearance: none; /*resetei a aparencia nativa do sistema operacional*/
+	background: #e5e3e3;
+    outline: none; /*resetando a linha externa nativa - temos como colocar: outline-style*/
+	width: 20%;
+    height: 5px;
+    border-radius: 5px;   
+}
+
+/*alterando a bolinha*/
+
+.bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /*resetando a aparência nativa do sistema operacional*/
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; /*arredondando o pointer - quanto maior o numero mais arredondada*/
+    background: #94c10e;
+    cursor: pointer;
+}
+
+#botao{
+	background-color: #1e1d2f;
+	color:white;
+	padding:2%;
+}
+
+
+
+

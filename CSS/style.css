@@ -1,0 +1,29 @@
+body{
+	font-family: sans-serif;
+}
+
+nav{
+	float: right;
+}
+
+nav ul{
+	list-style: none; /*remover bolinhas*/
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	text-decoration: none; /*remover sublinhado*/
+	color: #000000;
+	padding: 15px 15px 10px 15px;
+}
+
+nav ul li a:hover{ /*hover (mouse sobre o link)*/
+	color: #FF0000;
+	/*text-decoration: underline;*/
+	border-bottom: #FF0000 2px solid;
+}

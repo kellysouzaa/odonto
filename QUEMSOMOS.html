@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/favicon.ico">
+    <title>Document</title>
+</head>
+
+<title>  Odonto  </title>
+
+<style>
+/*para limpar configuração do navegador*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.wrapper {
+  margin:auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction:row; /*temos tambem em coluna -> column */
+  flex-wrap: wrap; 
+   /*qdo utilizamos blocos eles ficam um do lado do outro mesmo q tenha tamanho total da tela, entao para resolver isso utilizamos o flex-wrap:wrap */
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+  width: 90%; /*Largura do principal*/
+  height:auto;
+  background-color: rgb(255, 255, 255);
+  padding: 0px; /*espaço entre as caixas e o principal*/
+}
+
+.boxLogo{
+  background-color: #1e1d2f;
+  color:rgb(217, 79, 79);
+  width: 9%;
+  height: 50px;
+  margin: 0px; /*margem ao redor das caixas para ficarem distantes */
+  padding-top: 2%;
+  padding-left: 0.5%;
+  
+  
+
+}
+.imgLogo{
+  width:100%;
+  height: 100%x;
+}
+
+.boxTopo {
+  background-color: #1e1d2f;
+  color:white;
+  width: 90%;
+  height: 50px;
+  margin: 0px; /*margem ao redor das caixas para ficarem distantes */
+  padding-top: 2%;
+}
+
+
+.boxBanner {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+  margin: 10px; /*margem ao redor das caixas para ficarem distantes */
+  
+  
+}
+ /*se o calculo total das medidas (padding, margin e width) derem 100% as caixas não descem*/
+
+ .imgBanner{ /*criei uma classe para meu banner*/
+  width: 100%;
+  height:auto;
+}
+
+
+.boxTratamentos {
+/* PARA ALINHAR MEU CONTEUDO (ícone, textos...) DENTRO DAS CAIXAS DO TRATAMENTOS
+
+TIVE QUE COLOCAR DISPLAY FLEX para ALTERAR OS ALINHAMENTOS indivualmente na propria caixa*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction:column; /*em colunas*/
+  flex-wrap: wrap; /*para quebrar o ícone e os textos q estão dentro da box*/
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+
+/*alinhamento dos objetos termina aqui*/
+
+  background-color: #1e1d2f;
+  color:aliceblue;
+  width: 20%; 
+  height: auto;
+  justify-content: space-around;
+  border-radius: 25px;
+  padding: 0.5%;
+  padding-bottom: 10%;
+  margin-right: 3%;
+  text-align:center;
+  font-family: Century Gothic;
+  font-size:1.3vw ;
+}
+
+.icone{ /*tamanho dos ícones dentro do box tratamentso*/
+  width:50%;
+  height:auto;
+}
+
+.boxBannerLateral {
+  background-color:rgb(255, 255, 255);
+  width: 50%;
+  height: auto; /*para crescer com o tamanho do conteudo*/
+  margin-left:0%; /*margem ao redor das caixas para ficarem distantes */
+  font-size:1.1em;
+  text-align:justify;
+  
+}
+
+h1{
+  text-align: center;
+  font-size: 2.2em;
+  padding-bottom: 2%;
+}
+
+
+
+.boxConteudo {
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  margin: 0px; /*margem ao redor das caixas para ficarem distantes */
+  font-size:1.1vw;
+  text-align:justify;
+   
+}
+
+.boxRedesSociais{ 
+  display: flex; /*coloquei para alinhar poder utilizar os alinhamentos de caixa abaixo*/
+  justify-content:center;/*alinhando os blocos na horizontal dentro do principal*/
+  align-items:center; /*alinhando os blocos na vertical */
+  background-color: #1e1d2f;
+  color: white;
+  width: 30%;
+  height: 100px;
+  margin: 0px; 
+  padding: 1.64%;
+  font-size:1.1vw;
+  text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imgRedes{
+  width: 100%;
+  height:auto;
+}
+
+.boxRodape {
+  background-color:#343856;
+  font-family:Century Gothic, Geneva, Tahoma, sans-serif;
+  color:white;
+  width: 100%;
+  height: 20px;
+  margin: 0px; /*margem ao redor das caixas para ficarem distantes */
+  text-align:center;
+  padding:1%;
+  
+}
+
+
+/*BOTOES*/
+
+nav{
+	float: right;
+}
+
+nav ul{
+	list-style: none; /*remover bolinhas*/
+	margin: 0px;
+	padding: 0px;
+  font-size: 1.3vw;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	text-decoration: none; /*remover sublinhado*/
+	color: #ffffff;
+	padding: 15px 15px 10px 15px;
+  font-size: 1.0em;
+}
+
+nav ul li a:hover{ /*hover (mouse sobre o link)*/
+	color: #fffcfc;
+	/*text-decoration: underline;*/
+	border-bottom: #ffffff 2px solid; /*borda abaixo*/
+}
+
+
+
+
+
+
+
+/******* BREAKPOINTS - COR DA TELA EM DIFETENTES DISPOSITIVOS*********/
+
+@media (min-width: 576px){
+  body{
+    background-color: red;
+  }
+
+}
+
+@media (min-width: 768px){
+  body{
+    background-color: rgb(0, 85, 255);
+  }
+
+}
+
+
+@media (min-width: 992px){
+  body{
+    background-color: rgb(247, 19, 148);
+  }
+  
+}
+
+@media (min-width: 1200px){
+  body{
+    background-color: rgb(162, 255, 0);
+  }
+  
+}
+
+
+/* BREAKPOINTS - TAMANHO DA TELA EM DIFErENTES DISPOSITIVOS*/
+
+@media screen and (min-width : 375px) {
+  .boxTratamentos {
+    width: 80%;
+    height: auto;
+    float: left;
+    margin: 1%;
+    font-size: 1.3em;
+    padding: 10%;
+     
+  }
+
+}
+
+
+@media screen and (min-width : 576px) {
+  .boxTratamentos {
+    width: 80%;
+    height: auto;
+    float: left;
+    margin: 1%;
+    font-size: 1.8em;
+     
+  }
+
+  
+
+}
+
+@media screen and (min-width : 768px) {
+  .boxTratamentos {
+    width: 15%;
+    float: left;
+    margin-right: 5%;
+    padding: 1%;
+    font-size: 1.1vw;
+   
+    
+  }
+
+}
+
+@media screen and (min-width : 992px) {
+  .boxTratamentos {
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+    padding: 1%;
+   
+    
+  }
+  
+}
+
+@media screen and (min-width : 1200px) {
+  .boxTratamentos {
+    width: 20%;
+    float: left;
+    margin-right: 1%;
+    padding: 1%;
+  
+    
+  }
+
+   
+}
+
+</style>
+
+</head>
+
+<body>
+
+  
+<div class="wrapper">
+
+  <div class="boxLogo">
+    <img src="IMAGENS/logo.png" class="imgLogo" title="logoEmpresa" alt="img logo">
+  </div>
+
+  <div class="boxTopo">
+    <nav>
+      <ul>
+        <li><a href="index.html" style="opacity: 0.5;"> HOME </a></li> 
+        <!-- style aqui para permanecer a linha enquanto estou na pagina. Na proxima pagina coloco nela -->
+        <li><a href="quemsomos.html" style="border-bottom: #ffffff 2px solid;"> QUEM SOMOS</a></li>
+        <li><a href="alinhamentos.html" style="opacity: 0.5;">ALINHAMENTOS</a></li>
+        <li><a href="contato.html" style="opacity: 0.5;">CONTATO</a> </li>
+      </ul>
+     </nav>
+  </div>
+
+      
+      <div class="boxBanner">
+      <img src="IMAGENS/DENTISTAS.jpg" class="imgBanner" title="banner clareamento dental" alt="img dentes">
+      </div>
+
+         
+        
+        <div class="boxConteudo">
+          <h1> Dr. Felippe G. Soares <br> Dra. Eloisa F. Soares</h1>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem 
+          </p>
+          <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+           </p>
+
+           <p>Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        </p>
+        </div>
+
+
+     
+      
+
+
+      <div class="boxRedesSociais">
+        A odontoclinic <br>
+        Nossos tratamentos
+      </div>
+
+      <div class="boxRedesSociais">
+        Onde estamos <br>
+        Harmonização facial
+      </div>
+
+      <div class="boxRedesSociais">
+       
+       <img src="imagens/redessociais.png" title="redes sociais" alt="redes sociais" class="imgRedes">
+       
+      </div>
+
+
+
+
+
+      <div class="boxRodape">
+        Todos os direitos reservados - 2023 - ODONTOCLINIC
+      </div>
+      
+  
+</div>
+
+ 
+
+</body>
+</html>
+
+
+
+
+	
+	
